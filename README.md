@@ -24,6 +24,41 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+# 🐘🦠 NestJS Dual DB Integration (PostgreSQL + MongoDB)
+
+This is a mini project built with **NestJS** that demonstrates integration with **two databases**:
+- **PostgreSQL** (Relational DB via TypeORM)
+- **MongoDB** (NoSQL DB via Mongoose)
+
+The app allows you to **save data in both databases in parallel** using a DAO (Data Access Object) pattern.
+
+---
+
+## 🛠️ Tech Stack
+
+- [NestJS](https://nestjs.com/)
+- [TypeORM](https://typeorm.io/) – PostgreSQL integration
+- [Mongoose](https://mongoosejs.com/) – MongoDB integration
+- [PostgreSQL](https://www.postgresql.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [pgAdmin](https://www.pgadmin.org/) – PostgreSQL GUI
+- `.env` configuration using `@nestjs/config`
+
+---
+
+## 🗂️ Project Structure
+
+src/
+├── app.module.ts
+├── user/
+│ ├── user.controller.ts
+│ ├── user.service.ts
+│ ├── user.dao.postgres.ts # PostgreSQL DAO
+│ ├── user.dao.mongo.ts # MongoDB DAO
+│ ├── schemas/ # Mongoose schema
+│ ├── entities/ # TypeORM entity
+│ └── dto/
+│ └── create-user.dto.ts
 
 ## Project setup
 
